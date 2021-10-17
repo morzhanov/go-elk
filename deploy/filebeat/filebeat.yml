@@ -7,4 +7,4 @@ output.elasticsearch:
   hosts:
     - "elasticsearch:9200"
   indices:
-    - index: "goelk-%{[agent.version]}-%{+yyyy.MM.dd}"
+    - index: "goelklog-%{[agent.version]}-%{+yyyy.MM.dd}"

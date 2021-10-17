@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "d8b57373-9260-4624-a099-b158fa2709a0",
+		"name": "go-elk-example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/text/Updated",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"text",
+						"Updated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"updated title\",\n    \"author\": \"Updated Author\",\n    \"text\": \"Updated text.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/e8d13114-a22f-4af7-b109-153ad7c9f128",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"e8d13114-a22f-4af7-b109-153ad7c9f128"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ab283a22-9e42-4368-b28e-10b6116c80c6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ab283a22-9e42-4368-b28e-10b6116c80c6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

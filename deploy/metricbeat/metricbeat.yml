@@ -1,17 +1,12 @@
 metricbeat.config.modules:
-  path: ${path.config}/modules.d/*.yml
-  reload.enabled: false
 
 output.elasticsearch:
   hosts:
    - "elasticsearch:9200"
+  indices:
+    - index: "goelkmetr-%{[agent.version]}-%{+yyyy.MM.dd}"
 
 metricbeat.modules:
-  - module: elasticsearch
-    xpack.enabled: true
-    period: 10s
-    hosts:
-      - "elasticsearch:9200"
   - module: golang
     metricsets:
       - expvar
@@ -23,10 +18,3 @@ metricbeat.modules:
     expvar:
       namespace: "example"
       path: "/debug/vars"
-  - module: kibana
-    metricsets: [ "status" ]
-    period: 10s
-    hosts:
-      - "kibana:5601"
-    basepath: ""
-    enabled: true
