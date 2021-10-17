@@ -81,7 +81,7 @@ After index patterns created we could search and filter data on the `Discover` p
 
 Metrics data on `Discover` page:
 
-<img src="https://i.ibb.co/Yk8SBQg/1634498860795.png" alt="kibana-setup"/>
+<img src="https://i.ibb.co/B60nh52/1634498076514.png" alt="kibana-setup"/>
 
 ### Dashboard
 
@@ -92,4 +92,4 @@ Also, we could create a Kibana Dashboard and visualize ES data:
 - some go stats
 - some docs stats
 
-<img src="https://i.ibb.co/B60nh52/1634498076514.png" alt="kibana-setup"/>
+<img src="https://i.ibb.co/Yk8SBQg/1634498860795.png" alt="kibana-setup"/>
