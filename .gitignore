@@ -22,3 +22,5 @@
 
 # docker
 deploy/data
+
+log/

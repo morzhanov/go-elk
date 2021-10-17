@@ -1,0 +1,34 @@
+metricbeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+processors:
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+
+output.elasticsearch:
+  hosts: '${ELASTICSEARCH_HOSTS:elasticsearch:9200}'
+  username: '${ELASTICSEARCH_USERNAME:}'
+  password: '${ELASTICSEARCH_PASSWORD:}'
+
+metricbeat.modules:
+  - module: elasticsearch
+    xpack.enabled: true
+    period: 10s
+    hosts: ["http://127.0.0.1:9200"]
+  - module: golang
+    metricsets:
+      - expvar
+      - heap
+    period: 10s
+    hosts: [ "localhost:8080" ]
+    heap.path: "/debug/vars"
+    expvar:
+      namespace: "example"
+      path: "/debug/vars"
+  - module: kibana
+    metricsets: [ "status" ]
+    period: 10s
+    hosts: [ "localhost:5601" ]
+    basepath: ""
+    enabled: true

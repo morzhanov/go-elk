@@ -3,6 +3,8 @@ package config
 import "github.com/spf13/viper"
 
 type Config struct {
+	ESuri   string `mapstructure:"ES_URI"`
+	ESindex string `mapstructure:"ES_INDEX"`
 }
 
 func NewConfig() (config *Config, err error) {

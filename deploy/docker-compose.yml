@@ -32,8 +32,23 @@ services:
     networks:
       - go-elk-example
 
+  metricbeat:
+    build: ./metricbeat
+    container_name: go_elk_example_metricbeat
+    environment:
+      ELASTICSEARCH_HOSTS: http://127.0.0.1:9200
+      KIBANA_HOST: http://127.0.0.1:5601
+    volumes:
+      - metricbeat_data:/usr/share/metricbeat/data
+    networks:
+      - go-elk-example
+    depends_on:
+      - elasticsearch
+      - kibana
+
 networks:
   go-elk-example:
 
 volumes:
   elasticsearch_data:
+  metricbeat_data:

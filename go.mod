@@ -2,15 +2,18 @@ module github.com/morzhanov/go-elk-example
 
 go 1.17
 
-require github.com/spf13/viper v1.9.0
+require (
+	github.com/brianvoe/gofakeit/v6 v6.9.0
+	github.com/elastic/go-elasticsearch/v7 v7.15.1
+	github.com/gin-gonic/gin v1.7.4
+	github.com/satori/go.uuid v1.2.0
+	github.com/spf13/viper v1.9.0
+	go.uber.org/zap v1.19.1
+)
 
 require (
-	github.com/brianvoe/gofakeit/v6 v6.9.0 // indirect
-	github.com/elastic/go-elasticsearch/v8 v8.0.0-20211001143748-fd99a833e74f // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
-	github.com/gin-contrib/cors v1.3.1 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.7.4 // indirect
 	github.com/go-playground/locales v0.13.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/go-playground/validator/v10 v10.4.1 // indirect
@@ -32,7 +35,6 @@ require (
 	github.com/ugorji/go/codec v1.1.7 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
-	go.uber.org/zap v1.19.1 // indirect
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5 // indirect
 	golang.org/x/sys v0.0.0-20210823070655-63515b42dcdf // indirect
 	golang.org/x/text v0.3.6 // indirect

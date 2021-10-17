@@ -7,13 +7,13 @@ import (
 	"go.uber.org/zap"
 )
 
-func NewLogger(name string) (*zap.Logger, error) {
+func NewLogger() (*zap.Logger, error) {
 	cfg := zap.NewDevelopmentConfig()
 	baseLogsPath := "./log/go-elk-example/"
 	if err := os.MkdirAll(baseLogsPath, 0777); err != nil {
 		return nil, err
 	}
-	filePath := fmt.Sprintf("%s%s.log", baseLogsPath, name)
+	filePath := fmt.Sprintf("%sapp.log", baseLogsPath)
 	_, err := os.Create(filePath)
 	if err != nil {
 		return nil, err
