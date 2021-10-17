@@ -1,6 +1,6 @@
-# go-elk-example
+# Go ELK example
 
-Go ELK stack example.
+Go ELK stack example with filebeat, metricbeat and ElasticSearch API.
 
 <img src="https://i.ibb.co/w6pFWFH/IMG-0148.png" alt="arch"/>
 
