@@ -92,6 +92,7 @@ func (r *rest) metricsMiddleware(c *gin.Context) {
 
 func (r *rest) Listen() {
 	router := gin.Default()
+	router.GET("/debug/vars", r.mc.GetHandler())
 	router.GET("/:field/:value", r.handleFind)
 	router.PUT("/:id", r.handleUpdate)
 	router.DELETE("/:id", r.handleDelete)

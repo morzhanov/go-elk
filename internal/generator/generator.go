@@ -31,7 +31,7 @@ func (g *gen) generateDoc() (*doc.Document, error) {
 
 func (g *gen) Generate() {
 	for {
-		time.Sleep(time.Second * 10)
+		time.Sleep(time.Second * 3)
 		d, err := g.generateDoc()
 		if err != nil {
 			g.log.Error("an error occurred when trying to generate doc", zap.Error(err))
